@@ -1,0 +1,32 @@
+export const colors = {
+  "light": {
+    "background": "#FFFFFF",
+    "box-background": "#FFFFFF",
+    "box-border-color": "#60F09A",
+    "font-color": "#333333",
+    "primary": "#127848",
+    "primary-light": "#60F09A",
+    "primary-dark": "#43B47E",
+    "button-color": "#585858",
+  },
+  "dark": {
+    "background": "#242324",
+    "box-background": "#464546",
+    "box-border-color": "#3A3B3C",
+    "font-color": "#FFFFFF",
+    "primary": "#127848",
+    "primary-light": "#60F09A",
+    "primary-dark": "#43B47E",
+    "button-color": "#585858",
+  },
+
+  "black": "black",
+  "white": "white",
+  "red": "red",
+  "blue": "blue",
+  "purple": "purple",
+  "green": "green",
+  "yellow": "yellow",
+  "orange": "orange",
+  "gray": "gray",
+};
