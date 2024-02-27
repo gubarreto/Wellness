@@ -21,7 +21,7 @@ export const ListCards = ({data}) => {
         keyExtractor={(_, index) => index}
         renderItem={({item, index}) => <Card {...item} index={index} />}
         style={s.flatlist}
-        numColumns={2}
+        horizontal
       />
     </View>
   )
@@ -29,11 +29,9 @@ export const ListCards = ({data}) => {
 
 const Card = ({name, icon, index}) => {
   const s = styles();
-  const isPar = !!((index%2) == 0);
-  console.log(isPar);
   const Icon = icon || cardIconDefault;
   return (
-    <View style={[s.cardContainer, {marginLeft: 20, marginRight: isPar ? 0 : 20}]}>
+    <View style={s.cardContainer}>
       <Icon width={24} height={24} color={getColor('font-color')} />
       <Text style={s.cardName}>{name}</Text>
     </View>
@@ -50,7 +48,6 @@ const styles = () => {
     },
     flatlist: {
       flex: 1,
-      // margin: 20,
     },
     touchable: {},
     text: {
@@ -62,7 +59,9 @@ const styles = () => {
       height: 80,
       elevation: 20,
       borderRadius: 6,
-      width: (width - 60) / 2, //(2 x 20 do padding) + 5 (espaçamento central entre 2 cards)
+      paddingHorizontal: 15,
+      minWidth: 80,
+      maxWidth: (width - 60) / 2, //(2 x 20 do padding) + 5 (espaçamento central entre 2 cards)
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: getColor('background'),

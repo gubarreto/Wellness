@@ -5,7 +5,7 @@ import {colors} from "../assets";
 export const getColor = (hash) => {
 
   const isDarkMode = useColorScheme() === "light";
-  const theme = isDarkMode ? "light" : "dark";
+  const theme = !isDarkMode ? "light" : "dark";
 
   const themeColors = {
     "background": true,
